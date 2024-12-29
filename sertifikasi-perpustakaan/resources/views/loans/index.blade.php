@@ -3,10 +3,9 @@
 @section('content')
 
 <div class="flex justify-between mt-6">
-
-    <!-- Filter Form -->
+    <!-- filter form -->
     <form action="{{ route('loans.index') }}" method="GET" class="mb-6 text-sm flex space-x-4">
-        <!-- Member Filter -->
+        <!-- member filter -->
         <div>
             <label for="member_id" class="block text-gray-700 font-medium">Filter by Member</label>
             <select name="member_id" id="member_id"
@@ -20,7 +19,7 @@
             </select>
         </div>
 
-        <!-- Filter Button -->
+        <!-- filter button -->
         <div class="flex items-end">
             <button type="submit"
                 class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
@@ -38,7 +37,7 @@
 
 </div>
 
-<!-- Tabel Pinjaman -->
+<!-- loan data -->
 <table class="text-sm table-auto border-collapse border border-gray-300 w-full text-left">
 <thead>
         <tr>

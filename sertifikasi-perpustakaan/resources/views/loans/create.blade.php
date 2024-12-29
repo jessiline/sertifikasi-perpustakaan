@@ -7,7 +7,7 @@
     <form action="{{ route('loans.store') }}" method="POST">
         @csrf
 
-        <!-- Member -->
+        <!-- member -->
         <div class="mb-4">
             <label for="member_id" class="block text-gray-700 font-medium">Member</label>
             <select name="member_id" id="member_id" 
@@ -25,7 +25,7 @@
             @enderror
         </div>
 
-        <!-- Book -->
+        <!-- book -->
         <div class="mb-4">
             <label for="book_id" class="block text-gray-700 font-medium">Book</label>
             <select name="book_id" id="book_id" 
@@ -44,7 +44,7 @@
         </div>
 
 
-        <!-- Loan Date -->
+        <!-- loan date -->
         <div class="mb-4">
             <label for="loan_date" class="block text-gray-700 font-medium">Loan Date</label>
             <input type="date" name="loan_date" id="loan_date" value="{{ old('loan_date') }}"
@@ -55,7 +55,7 @@
             @enderror
         </div>
 
-        <!-- Due Date (Disabled) -->
+        <!-- due date -->
         <div class="mb-4">
             <label for="due_date" class="block text-gray-700 font-medium">Due Date</label>
             <input type="date" name="due_date" id="due_date" value="{{ old('due_date') }}"
@@ -68,7 +68,7 @@
         </div>
 
 
-        <!-- Submit Button -->
+        <!-- submit button -->
         <div class="mt-6 flex justify-end">
             <button type="submit"
                 class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition duration-300">
@@ -95,17 +95,16 @@
             allowClear: true,
             width: '100%',
             ajax: {
-                url: '{{ route('searchBooks') }}',  // This route will handle the search request
+                url: '{{ route('searchBooks') }}',  //handle search request
                 dataType: 'json',
                 delay: 250,
                 data: function (params) {
                     return {
-                        q: params.term, // Search term
+                        q: params.term, 
                         page: params.page || 1
                     };
                 },
                 processResults: function (data, params) {
-                    // You can define the result format and pagination here
                     return {
                         results: data.books.map(function(book) {
                             return {

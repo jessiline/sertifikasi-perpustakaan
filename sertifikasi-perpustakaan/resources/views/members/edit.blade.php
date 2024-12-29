@@ -8,7 +8,7 @@
             @csrf
             @method('PUT') <!-- Menggunakan metode PUT untuk update -->
 
-            <!-- Name -->
+            <!-- name -->
             <div class="mb-4">
                 <label for="name" class="block text-gray-700 font-medium">Name</label>
                 <input type="text" name="name" id="name" value="{{ old('name', $member->name) }}"
@@ -19,7 +19,7 @@
                 @enderror
             </div>
 
-            <!-- Email -->
+            <!-- email -->
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 font-medium">Email</label>
                 <input type="email" name="email" id="email" value="{{ old('email', $member->email) }}"
@@ -30,7 +30,7 @@
                 @enderror
             </div>
 
-            <!-- Phone -->
+            <!-- phone -->
             <div class="mb-4">
                 <label for="phone" class="block text-gray-700 font-medium">Phone</label>
                 <input type="tel" name="phone" id="phone" value="{{ old('phone', $member->phone) }}"
@@ -41,7 +41,7 @@
                 @enderror
             </div>
 
-            <!-- Submit Button -->
+            <!-- submit button -->
             <div class="mt-6 flex justify-end">
                 <button type="submit"
                     class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">

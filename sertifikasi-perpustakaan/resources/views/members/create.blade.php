@@ -3,11 +3,9 @@
 @section('content')
 <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg mt-12">
     <h2 class="text-2xl font-semibold text-center mb-6">Add new member</h2>
-
     <form action="{{ route('members.store') }}" method="POST">
         @csrf
-
-        <!-- Name -->
+        <!-- name -->
         <div class="mb-4">
             <label for="name" class="block text-gray-700 font-medium">Name</label>
             <input type="text" name="name" id="name" value="{{ old('name') }}"
@@ -18,7 +16,7 @@
             @enderror
         </div>
 
-        <!-- Email -->
+        <!-- email -->
         <div class="mb-4">
             <label for="email" class="block text-gray-700 font-medium">Email</label>
             <input type="email" name="email" id="email" value="{{ old('email') }}"
@@ -29,7 +27,7 @@
             @enderror
         </div>
 
-        <!-- Phone -->
+        <!-- phone -->
         <div class="mb-4">
             <label for="phone" class="block text-gray-700 font-medium">Phone</label>
             <input type="tel" name="phone" id="phone" value="{{ old('phone') }}"
@@ -41,7 +39,7 @@
         </div>
 
 
-        <!-- Submit Button -->
+        <!-- submit button -->
         <div class="mt-6 flex justify-end">
             <button type="submit"
                 class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition duration-300">

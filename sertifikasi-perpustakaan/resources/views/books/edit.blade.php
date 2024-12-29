@@ -8,7 +8,7 @@
             @csrf
             @method('PUT') <!-- Menggunakan metode PUT untuk update -->
 
-            <!-- Title -->
+            <!-- title -->
             <div class="mb-4">
                 <label for="title" class="block text-gray-700 font-medium">Title</label>
                 <input type="text" name="title" id="title" value="{{ old('title', $book->title) }}"
@@ -19,7 +19,7 @@
                 @enderror
             </div>
 
-            <!-- Author -->
+            <!-- author -->
             <div class="mb-4">
                 <label for="author" class="block text-gray-700 font-medium">Author</label>
                 <input type="text" name="author" id="author" value="{{ old('author', $book->author) }}"
@@ -30,7 +30,7 @@
                 @enderror
             </div>
 
-            <!-- Publisher -->
+            <!-- publisher -->
             <div class="mb-4">
                 <label for="publisher" class="block text-gray-700 font-medium">Publisher</label>
                 <input type="text" name="publisher" id="publisher" value="{{ old('publisher', $book->publisher) }}"
@@ -41,7 +41,7 @@
                 @enderror
             </div>
 
-            <!-- Published Date -->
+            <!-- published date -->
             <div class="mb-4">
                 <label for="published_date" class="block text-gray-700 font-medium">Published Date</label>
                 <input type="date" name="published_date" id="published_date" value="{{ old('published_date', $book->published_date) }}"
@@ -52,7 +52,7 @@
                 @enderror
             </div>
 
-            <!-- Number of Pages -->
+            <!-- num of pages -->
             <div class="mb-4">
                 <label for="number_of_pages" class="block text-gray-700 font-medium">Number of Pages</label>
                 <input type="number" name="number_of_pages" id="number_of_pages" value="{{ old('number_of_pages', $book->number_of_pages) }}"
@@ -85,7 +85,7 @@
                 @enderror
             </div>
 
-            <!-- Submit Button -->
+            <!-- submit button -->
             <div class="mt-6 flex justify-end">
                 <button type="submit"
                     class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">

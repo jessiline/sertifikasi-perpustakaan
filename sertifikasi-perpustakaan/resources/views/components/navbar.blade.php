@@ -27,7 +27,6 @@
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="{{ url('/') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">Home</a>
             <a href="{{ route('members.index') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('members*') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">Members</a>
             <a href="{{ route('books.index') }}" class="rounded-md px-3 py-2 text-sm font-medium {{ request()->is('books*') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white' }}">Books</a>
